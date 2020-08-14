@@ -1,0 +1,24 @@
+.bg
+{
+    font-size: 20px;
+    background-color: darkorange;
+    color: white;
+}
+
+#Head
+{
+    font-size: 50px;
+    color:white;
+}
+
+#img
+{
+    background-image:url("wallpaper.jpg") ;
+    
+}
+h1{
+    color: white;
+}
+label{
+    color: white;
+}

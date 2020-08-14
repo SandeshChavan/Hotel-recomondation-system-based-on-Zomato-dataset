@@ -1,0 +1,41 @@
+<body id="img">
+<div >
+  <h1 id="Head">Hotel Recommendation</h1>
+    <h1>Online</h1><label>Yes</label><input type="radio" value=1 name="online" [(ngModel)]="online"><label>No</label><input type="radio" value=0 [(ngModel)]="online" name="online"><br/>
+    <h1>Book Table</h1><label>Yes</label><input type="radio" value=1 name="Book" [(ngModel)]="book"><label>No</label><input type="radio" value=0 name="Book" [(ngModel)]="book"><br/>
+    <h1>Cost</h1><input type="test" placeholder="Enter approximate cost" [(ngModel)]=" cost"><br/>
+    <h1>Rating</h1><select [(ngModel)]="valueRating">
+      <option *ngFor = "let rate of Rating" value={{rate}}>{{rate}}</option>
+    </select><br/>
+    <h1>Number of Voting</h1><select [(ngModel)]="valueVote">
+      <option *ngFor = "let vote of Voting" value={{vote}}>{{vote}}</option>
+    </select><br/>
+    <h1>Cuisine</h1><select [(ngModel)]=" nameCuisine">
+      <option *ngFor = "let cuisine of Cuisine" value={{cuisine}}>{{cuisine}}</option>
+    </select><br/>
+    <h1>Type of restaurant</h1><select [(ngModel)]="nameType">
+      <option *ngFor = "let type of Type" value={{type}}>{{type}}</option>
+    </select><br/>
+    <h1>Location</h1><select [(ngModel)]="nameLocation">
+      <option *ngFor = "let location of Location" value={{location}}>{{location}}</option>
+    </select><br/>
+    <button (click)="sendPost()">GET RECOMMENDATION</button>
+  
+  
+    <table class="bg" border=2px>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Voting</th>
+      <th>Online booking</th>
+      <th>Location</th>
+      <th>Cuisine</th>
+      <th>Rest Type</th>
+    </tr>
+    <tr *ngFor="let detail of list">
+      <td *ngFor="let value of data">{{detail[value]}}</td>
+    </tr>
+  </table>
+
+  </div>
+</body>
